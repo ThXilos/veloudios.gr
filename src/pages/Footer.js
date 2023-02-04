@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         <div className="contact-info">
           <p className="footer-column-title">Contact Information</p>
-          <ul class="footer-contact-list">
+          <ul className="footer-contact-list">
             <li className="footer-text">Mobile: +30 696 85 74 852</li>
             <li className="footer-text">Email: contact@veloudios.gr</li>
             <li className="footer-text">Address: Megaloxarh, 32, TK 84200</li>
@@ -45,7 +45,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
     max-width: 1200px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 3rem;
     padding: 3rem 0 0;
 

@@ -7,8 +7,12 @@ const Hero = () => {
       <div className="hero-container">
         <h1 className="hero-title">Plumbing services on Tinos Island.</h1>
         <p className="hero-text">
-          Solutions for all your house or business needs. Fast and reliable
-          services reaching across the island of Tinos.
+          Solutions for all your house and business needs.
+          <br />
+          <span>
+            <span className="brag-text">With 50+ businesses</span> accross the
+            island prefering our services.
+          </span>
         </p>
         <p className="btn">Get in touch</p>
       </div>
@@ -38,14 +42,22 @@ const Wrapper = styled.section`
 
   .hero-title {
     display: block;
-    font-size: 3.8rem;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
   }
 
   .hero-text {
     display: block;
     font-size: 3rem;
+    letter-spacing: -0.5px;
+    opacity: 0.9;
   }
-
+  .brag-text {
+    font-weight: 700;
+    color: #21ceb9;
+    opacity: 1;
+  }
   .btn {
     display: inline-block;
     background-color: #21ceb9;

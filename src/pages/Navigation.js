@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 const Navigation = () => {
   return (
     <Wrapper>
@@ -9,8 +10,16 @@ const Navigation = () => {
         </div>
         <div className="menu-item-container">
           <ul className="menu-item-list">
-            <li className="menu-item">main</li>
-            <li className="menu-item">about</li>
+            <li className="menu-item">
+              <NavLink className="menu-link" to="/">
+                Main
+              </NavLink>
+            </li>
+            <li className="menu-item">
+              <NavLink className="menu-link" to="/about">
+                About
+              </NavLink>
+            </li>
             <li className="menu-item">services</li>
             <li className="menu-item ctn">call us</li>
           </ul>

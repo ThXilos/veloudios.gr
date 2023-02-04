@@ -1,13 +1,19 @@
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import Navigation from "./pages/Navigation";
-import Hero from "./pages/Hero";
+import Main from "./pages/Main";
 import Footer from "./pages/Footer";
+import About from "./pages/About";
 function App() {
   return (
     <div>
       <header>
         <Navigation />
-        <Hero />
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+          <Route exact path="/about" element={<About />} />
+        </Routes>
         <Footer />
       </header>
       <main></main>
