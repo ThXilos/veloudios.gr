@@ -24,24 +24,43 @@ const ScrollButton = () => {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <Button style={{ display: visible ? "block" : "none" }}>
-      <TbChevronUp onClick={scrollToTop} />
-    </Button>
+    <Wrapper>
+      <button
+        className="btn-toTop"
+        style={{ opacity: visible ? "1" : "0" }}
+        onClick={scrollToTop}
+      >
+        <TbChevronUp />
+      </button>
+    </Wrapper>
   );
 };
 
-const Button = styled.button`
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  position: fixed;
-  right: 5%;
-  bottom: 5%;
+const Wrapper = styled.div`
+  .btn-toTop {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    font-size: 5rem;
+    z-index: 1;
+    cursor: pointer;
+    color: #90e7dc;
+    height: 90px;
+    align-items: center;
+    border: 2px solid #90e7dc;
+    border-radius: 100px;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
 
-  font-size: 5rem;
-  z-index: 1;
-  cursor: pointer;
-  color: #90e7dc;
+    transition: all 0.3s;
+  }
+
+  .btn-toTop:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+  }
 `;
 
 export default ScrollButton;
