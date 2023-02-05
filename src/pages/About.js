@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const About = () => {
+const About = ({ lang }) => {
   return (
     <Wrapper>
       <div className="container">
@@ -13,13 +13,13 @@ const About = () => {
           />
         </div>
         <div className="text-container">
-          <h1 className="primary-text">Meet your plummer</h1>
+          <h1 className="primary-text">
+            {lang ? "Meet your plumber" : "Γνωρίστε τον υδραυλικό σάς"}
+          </h1>
           <p className="about-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Praesentium beatae ullam facilis cum voluptatibus error recusandae
-            laborum in ab repellat! Aperiam explicabo libero odit magni itaque
-            possimus necessitatibus! Mollitia doloribus corrupti dicta
-            temporibus veniam soluta illo provident incidunt vitae delectus.
+            {lang
+              ? "Giannis Veloudios is a resident of Tinos Island, with over 20 year of experience and currently provides varius plumbing services to over 50 local business across the island."
+              : "Ο Γιαννη Βελουδιος ειναι ενας κατοικος Τηνου, με πανω απο 20 χρονια εμπειρια στον τομεα και προσφερει υδραυλικες υπηρεσιες σε πανω απο 50 επιχειρησεις με βαση το νησι της Τηνου."}
           </p>
         </div>
       </div>
@@ -48,7 +48,9 @@ const Wrapper = styled.section`
     font-size: 4.5rem;
     color: #444;
   }
-
+  .text-container {
+    height: 500px;
+  }
   .about-text {
     font-size: 2rem;
     line-height: 1.2;
@@ -60,6 +62,7 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 500px;
 
     position: relative;
   }

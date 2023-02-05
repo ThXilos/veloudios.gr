@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-const Navigation = () => {
+const Navigation = ({ language, handleSelection }) => {
   return (
     <Wrapper>
       <nav className="navigation-container">
@@ -29,6 +29,9 @@ const Navigation = () => {
               <a href="tel:30 6937696704" className="menu-link ctc">
                 Call us
               </a>
+            </li>
+            <li className="language-selector">
+              <p onClick={() => handleSelection()}>{language ? "EN" : "GR"}</p>
             </li>
           </ul>
         </div>
@@ -58,12 +61,26 @@ const Wrapper = styled.section`
       cursor: pointer;
     }
 
+    .menu-item-container {
+      position: relative;
+    }
+
     .menu-item-list {
       list-style: none;
       display: flex;
       gap: 5rem;
       font-size: 2.2rem;
       align-items: center;
+
+      .language-selector {
+        font-size: 1.6rem;
+        position: absolute;
+        top: -15px;
+        right: -60px;
+      }
+      .language-selector:hover {
+        cursor: pointer;
+      }
 
       // .menu-link:link,
       // .menu-link:visited {
