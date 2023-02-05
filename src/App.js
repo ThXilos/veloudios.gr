@@ -6,6 +6,7 @@ import Main from "./pages/Main";
 import Footer from "./pages/Footer";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import ScrollButton from "./component/ScrollButton";
 
 function App() {
   const [language, setLanguage] = useState(false);
@@ -26,6 +27,7 @@ function App() {
           />
         </Routes>
         <Footer lang={language} />
+        <ScrollButton />
       </header>
       <main></main>
     </div>
