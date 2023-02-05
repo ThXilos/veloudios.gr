@@ -20,8 +20,16 @@ const Navigation = () => {
                 About
               </NavLink>
             </li>
-            <li className="menu-item">services</li>
-            <li className="menu-item ctn">call us</li>
+            <li className="menu-item">
+              <NavLink className="menu-link" to="/services">
+                Services
+              </NavLink>
+            </li>
+            <li className="menu-item">
+              <a href="tel:30 6937696704" className="menu-link ctc">
+                Call us
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -57,17 +65,38 @@ const Wrapper = styled.section`
       font-size: 2.2rem;
       align-items: center;
 
-      .menu-item {
+      // .menu-link:link,
+      // .menu-link:visited {
+      //   color: #fff;
+      //   text-decoration: none;
+      //   opacity: 0.8;
+      //   transition: opacity 0.3s;
+      //   display: block;
+      // }
+
+      // .menu-link:hover,
+      // .menu-link:active {
+      //   opacity: 1;
+      // }
+
+      .menu-link {
+        color: #fff;
+        text-decoration: none;
         opacity: 0.8;
-        transition: opacity 0.3s;
+        display: block;
+
+        transition: all 0.3s;
       }
 
-      .menu-item:hover {
+      .menu-link:hover {
         opacity: 1;
-        cursor: pointer;
       }
 
-      .ctn {
+      .menu-link.active {
+        opacity: 1;
+      }
+
+      .ctc {
         background-color: #21ceb9;
         padding: 1rem 4rem;
         border-radius: 9px;
