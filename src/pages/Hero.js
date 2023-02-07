@@ -7,13 +7,14 @@ const Hero = () => {
       <div className="hero-container">
         <h1 className="hero-title">Plumbing services on Tinos Island.</h1>
         <p className="hero-text">
-          Solutions for all
-          <br className="break-mobile" /> your house and business needs.
+          <span className="sec-text">
+            Solutions for all your house and business needs.
+          </span>
           <br className="break" />
           <br className="break-mobile" />
           <span>
-            <span className="brag-text">With 50+ businesses</span> accross the
-            island prefering our services.
+            <span className="brag-text">With 50+ businesses</span> using our
+            services.
           </span>
         </p>
         <p className="btn">Get in touch</p>
@@ -114,6 +115,11 @@ const Wrapper = styled.section`
 
   @media (max-width: 413px) {
     background-position: 20%;
+
+    .sec-text {
+      display: none;
+    }
+
     .break {
       display: none;
     }
@@ -126,14 +132,15 @@ const Wrapper = styled.section`
     }
     .hero-container {
       left: 50%;
-      top: 40%;
+      top: 50%;
       width: 90%;
+      text-align: center;
     }
 
     .hero-title {
-      text-align: left;
       font-size: 4rem;
       letter-spacing: 1.2px;
+      margin-bottom: 24rem;
     }
     .hero-text {
       font-size: 3rem;
