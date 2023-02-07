@@ -101,7 +101,7 @@ const Wrapper = styled.section`
   @media (max-width: 835px) {
     background-size: cover;
     background-position: -1% 90%;
-    height: 70vh;
+    height: 80vh;
 
     .hero-container {
       left: 37%;
