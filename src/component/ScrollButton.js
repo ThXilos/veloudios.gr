@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { TbChevronUp } from "react-icons/tb";
+
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false);
 
@@ -52,14 +53,14 @@ const Wrapper = styled.div`
     align-items: center;
     border: 2px solid #90e7dc;
     border-radius: 100px;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
 
     transition: all 0.3s;
   }
 
   .btn-toTop:hover {
     transform: translateY(-1rem);
-    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
   }
 `;
 

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { TbGridDots } from "react-icons/tb";
 const Navigation = ({ language, handleSelection }) => {
   return (
     <Wrapper>
@@ -10,17 +11,17 @@ const Navigation = ({ language, handleSelection }) => {
         </div>
         <div className="menu-item-container">
           <ul className="menu-item-list">
-            <li className="menu-item">
+            <li className="menu-item hide">
               <NavLink className="menu-link" to="/">
                 Main
               </NavLink>
             </li>
-            <li className="menu-item">
+            <li className="menu-item hide">
               <NavLink className="menu-link" to="/about">
                 About
               </NavLink>
             </li>
-            <li className="menu-item">
+            <li className="menu-item hide">
               <NavLink className="menu-link" to="/services">
                 Services
               </NavLink>
@@ -29,6 +30,9 @@ const Navigation = ({ language, handleSelection }) => {
               <a href="tel:30 6937696704" className="menu-link ctc">
                 Call us
               </a>
+            </li>
+            <li>
+              <TbGridDots className="menu-icon" />
             </li>
             <li className="language-selector">
               <p onClick={() => handleSelection()}>{language ? "EN" : "GR"}</p>
@@ -44,6 +48,9 @@ const Wrapper = styled.section`
   background-color: #1c1e6c;
   color: #fff;
   text-transform: capitalize;
+  .menu-icon {
+    display: none;
+  }
 
   .navigation-container {
     max-width: 1200px;
@@ -82,20 +89,6 @@ const Wrapper = styled.section`
         cursor: pointer;
       }
 
-      // .menu-link:link,
-      // .menu-link:visited {
-      //   color: #fff;
-      //   text-decoration: none;
-      //   opacity: 0.8;
-      //   transition: opacity 0.3s;
-      //   display: block;
-      // }
-
-      // .menu-link:hover,
-      // .menu-link:active {
-      //   opacity: 1;
-      // }
-
       .menu-link {
         color: #fff;
         text-decoration: none;
@@ -117,6 +110,45 @@ const Wrapper = styled.section`
         background-color: #21ceb9;
         padding: 1rem 4rem;
         border-radius: 9px;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .navigation-container {
+      max-width: 900px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .navigation-container {
+      max-width: 700px;
+    }
+  }
+
+  @media (max-width: 835px) {
+    .navigation-container {
+      justify-content: space-around;
+    }
+
+    .navigation-container .menu-item-list {
+      gap: 2rem;
+    }
+
+    .navigation-container .menu-item-list .ctc {
+      padding: 1rem 2rem;
+    }
+
+    .navigation-container .menu-item-list .language-selector {
+      right: -35px;
+    }
+
+    @media (max-width: 600px) {
+      .menu-icon {
+        display: block;
+      }
+      .hide {
+        display: none;
       }
     }
   }
