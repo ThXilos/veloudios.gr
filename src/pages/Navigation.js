@@ -151,6 +151,12 @@ const Wrapper = styled.section`
         display: none;
       }
     }
+
+    @media (max-width: 413px) {
+      .navigation-container .menu-item-list .language-selector {
+        right: -2.5rem;
+      }
+    }
   }
 `;
 
