@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { TbGridDots } from "react-icons/tb";
+import { TbGridDots, TbArrowsHorizontal } from "react-icons/tb";
 const Navigation = ({ language, handleSelection }) => {
   return (
     <Wrapper>
@@ -26,18 +26,19 @@ const Navigation = ({ language, handleSelection }) => {
                 Services
               </NavLink>
             </li>
-            <li className="menu-item">
-              <a href="tel:30 6937696704" className="menu-link ctc">
-                Call us
-              </a>
-            </li>
-            <li>
-              <TbGridDots className="menu-icon" />
-            </li>
-            <li className="language-selector">
-              <p onClick={() => handleSelection()}>{language ? "EN" : "GR"}</p>
-            </li>
           </ul>
+          <div className="ctc-container">
+            <a href="tel:30 6937696704" className=" menu-link ctc">
+              Call us
+            </a>
+          </div>
+          <div>
+            <TbGridDots className="menu-icon" />
+          </div>
+          <div className="language-selector" onClick={() => handleSelection()}>
+            <p>{language ? "EN" : "GR"}</p>
+            <TbArrowsHorizontal className="lang-toggle" />
+          </div>
         </div>
       </nav>
     </Wrapper>
@@ -48,6 +49,7 @@ const Wrapper = styled.section`
   background-color: #1c1e6c;
   color: #fff;
   text-transform: capitalize;
+
   .menu-icon {
     display: none;
   }
@@ -59,59 +61,69 @@ const Wrapper = styled.section`
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+  }
 
-    .logo-container {
-      font-size: 3.6rem;
-    }
+  .logo-container {
+    font-size: 3.6rem;
+  }
 
-    .logo:hover {
-      cursor: pointer;
-    }
+  .logo:hover {
+    cursor: pointer;
+  }
 
-    .menu-item-container {
-      position: relative;
-    }
+  .menu-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+  }
 
-    .menu-item-list {
-      list-style: none;
-      display: flex;
-      gap: 5rem;
-      font-size: 2.2rem;
-      align-items: center;
+  .menu-item-list {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    font-size: 2.2rem;
+    align-items: center;
+  }
 
-      .language-selector {
-        font-size: 1.6rem;
-        position: absolute;
-        top: -15px;
-        right: -60px;
-      }
-      .language-selector:hover {
-        cursor: pointer;
-      }
+  .language-selector {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    position: absolute;
+    top: -15px;
+    right: -35px;
+  }
+  .language-selector:hover {
+    cursor: pointer;
+  }
 
-      .menu-link {
-        color: #fff;
-        text-decoration: none;
-        opacity: 0.8;
-        display: block;
+  .lang-toggle {
+    color: #fff;
+  }
 
-        transition: all 0.3s;
-      }
+  .menu-link {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    display: block;
 
-      .menu-link:hover {
-        opacity: 1;
-      }
+    transition: all 0.3s;
+  }
+  .ctc {
+    font-size: 2rem;
+    background-color: #21ceb9;
+    padding: 1rem 4rem;
+    border-radius: 9px;
+  }
 
-      .menu-link.active {
-        opacity: 1;
-      }
+  .menu-link:hover {
+    opacity: 1;
+  }
 
-      .ctc {
-        background-color: #21ceb9;
-        padding: 1rem 4rem;
-        border-radius: 9px;
-      }
-    }
+  .menu-link.active {
+    opacity: 1;
   }
 
   @media (max-width: 1300px) {
@@ -142,20 +154,44 @@ const Wrapper = styled.section`
     .navigation-container .menu-item-list .language-selector {
       right: -35px;
     }
-
-    @media (max-width: 600px) {
-      .menu-icon {
-        display: block;
-      }
-      .hide {
-        display: none;
-      }
+  }
+  @media (max-width: 600px) {
+    .hide {
+      display: none;
     }
 
-    @media (max-width: 413px) {
-      .navigation-container .menu-item-list .language-selector {
-        right: -2.5rem;
-      }
+    .menu-item-container {
+      padding-right: 2rem;
+    }
+
+    .menu-icon {
+      display: block;
+      font-size: 4rem;
+    }
+
+    .language-selector {
+      top: -3rem;
+    }
+
+    .mobile-menu {
+    }
+  }
+
+  @media (max-width: 413px) {
+    .menu-item-container {
+      gap: 0;
+    }
+
+    .ctc {
+      text-align: center;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      width: 10rem;
+      margin-right: 1rem;
+    }
+
+    .language-selector {
+      right: -2rem;
     }
   }
 `;

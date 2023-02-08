@@ -94,7 +94,7 @@ const Wrapper = styled.section`
     padding: 15rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 9.6rem;
+    row-gap: 15rem;
     column-gap: 6.5rem;
   }
 
