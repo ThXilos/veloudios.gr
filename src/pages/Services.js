@@ -169,6 +169,9 @@ const Wrapper = styled.section`
       align-items: center;
       padding: 0 0 20rem;
     }
+    .service-list-container {
+      padding: 2rem 0 1rem;
+    }
   }
 `;
 

@@ -135,6 +135,12 @@ const Wrapper = styled.section`
     }
   }
 
+  @media (max-width: 375px) {
+    .hero-container {
+      gap: 4.2rem;
+    }
+  }
+
   @media (orientation: landscape) and (max-width: 915px) {
     .hero-container {
       gap: 0;

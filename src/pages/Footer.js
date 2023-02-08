@@ -44,6 +44,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem 1rem;
 
   .footer-info-container {
     max-width: 1200px;
