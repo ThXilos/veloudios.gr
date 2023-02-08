@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <div className="footer-info-container">
-        <div className="contact-info">
+        <div className="contact-info col-1">
           <p className="footer-column-title">
             About Veloudios Plumbing Services
           </p>
@@ -16,11 +16,12 @@ const Footer = () => {
             has a wide veriety of services.
           </p>
         </div>
-        <div className="contact-info">
+
+        <div className="contact-info col-2">
           <p className="footer-column-title">Licence to operate</p>
           <p className="footer-text">Lic No: xxx-3232-xxx-3233</p>
         </div>
-        <div className="contact-info">
+        <div className="contact-info col-3">
           <p className="footer-column-title">Contact Information</p>
           <ul className="footer-contact-list">
             <li className="footer-text">Mobile: +30 696 85 74 852</li>
@@ -39,44 +40,74 @@ const Footer = () => {
 const Wrapper = styled.section`
   background-color: #3d404c;
   color: #fff;
-  padding: 0.2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .footer-info-container {
-    margin: 0 auto;
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
-    padding: 3rem 0 0;
+    gap: 5rem;
+  }
 
-    .contact-info {
+  .contact-info {
+  }
+
+  .footer-column-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .footer-contact-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-text {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 300;
+    opacity: 0.6;
+  }
+
+  .copyright-info {
+    align-self: center;
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 1000px) {
+    .footer-info-container {
+      max-width: 900px;
     }
+  }
 
-    .footer-column-title {
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      font-weight: 600;
+  @media (max-width: 835px) {
+    .footer-info-container {
+      max-width: 700px;
     }
 
     .footer-text {
-      font-size: 1.6rem;
-      font-weight: 300;
-      opacity: 0.5;
-      line-height: 2.2rem;
-    }
-
-    .footer-contact-list {
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
+      font-size: 1.4rem;
     }
   }
-  .copyright-info {
-    text-align: center;
-    font-size: 1.2rem;
-    opacity: 0.5;
+
+  @media (max-width: 600px) {
+    .footer-info-container {
+      grid-template-columns: 1fr;
+      grid-gap: 3rem;
+      padding: 2rem 2rem;
+    }
+  }
+
+  @media (max-width: 413px) {
+    .footer-info-container {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+    }
   }
 `;
 
