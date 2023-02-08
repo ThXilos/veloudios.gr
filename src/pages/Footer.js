@@ -105,6 +105,8 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 413px) {
+    .justify-content: center;
+
     .footer-info-container {
       grid-template-columns: 1fr;
       grid-gap: 2rem;
