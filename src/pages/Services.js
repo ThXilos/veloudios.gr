@@ -10,60 +10,53 @@ const Services = () => {
           Our services cover both business and household needs.
         </h2>
       </div>
-      <div className="service-list-container grid--1--col">
-        <div className="grid--2--cols flip">
-          <div className="service-text-box">
-            <h3 className="heading-tertiary">Water filtering installation</h3>
-            <p className="service-description">
-              Enjoy clean and safe drinking water with our water filter
-              installation service. Our experienced technicians will assess your
-              water quality and recommend the best solution for your needs.
-            </p>
-          </div>
-          <div className="service-image-container">
-            <img
-              src="https://via.placeholder.com/700"
-              alt="Water filtering installation"
-              className="service-image"
-            />
-          </div>
+      <div className="service-list-container">
+        <div className="service-text-box">
+          <h3 className="heading-tertiary">Water filtering installation</h3>
+          <p className="service-description">
+            Enjoy clean and safe drinking water with our water filter
+            installation service. Our experienced technicians will assess your
+            water quality and recommend the best solution for your needs.
+          </p>
         </div>
-
-        <div className="grid--2--cols">
-          <div className="service-image-container">
-            <img
-              src="https://via.placeholder.com/700"
-              alt="Plumbing installation"
-              className="service-image"
-            />
-          </div>
-          <div className="service-text-box">
-            <h3 className="heading-tertiary">Plumbing Installation</h3>
-            <p className="service-description">
-              Fix your plumbing worries with our professional plumbing service.
-              Our experienced technicians are equipped to handle all your
-              plumbing needs, from simple repairs to complex installations.
-            </p>
-          </div>
+        <div className="service-image-container">
+          <img
+            src="https://via.placeholder.com/700"
+            alt="Water filtering installation"
+            className="service-image"
+          />
         </div>
-
-        <div className="grid--2--cols">
-          <div className="service-text-box">
-            <h3 className="heading-tertiary">Heat Pump Installation</h3>
-            <p className="service-description">
-              Upgrade your home comfort with a reliable and efficient heat pump
-              installation by our expert technicians. Our heat pump installation
-              service offers personalized solutions, professional installation,
-              and top-quality products.
-            </p>
-          </div>
-          <div className="service-image-container">
-            <img
-              src="https://via.placeholder.com/700"
-              alt="Heat Pump Installation"
-              className="service-image"
-            />
-          </div>
+        {/* add */}
+        <div className="service-image-container">
+          <img
+            src="https://via.placeholder.com/700"
+            alt="Water filtering installation"
+            className="service-image"
+          />
+        </div>
+        <div className="service-text-box">
+          <h3 className="heading-tertiary">Water filtering installation</h3>
+          <p className="service-description">
+            Enjoy clean and safe drinking water with our water filter
+            installation service. Our experienced technicians will assess your
+            water quality and recommend the best solution for your needs.
+          </p>
+        </div>
+        {/* add */}
+        <div className="service-text-box">
+          <h3 className="heading-tertiary">Water filtering installation</h3>
+          <p className="service-description">
+            Enjoy clean and safe drinking water with our water filter
+            installation service. Our experienced technicians will assess your
+            water quality and recommend the best solution for your needs.
+          </p>
+        </div>
+        <div className="service-image-container">
+          <img
+            src="https://via.placeholder.com/700"
+            alt="Water filtering installation"
+            className="service-image"
+          />
         </div>
       </div>
     </Wrapper>
@@ -76,11 +69,7 @@ const Wrapper = styled.section`
   margin: 0 auto;
 
   .service-heading-container {
-    padding: 9.2rem 0 10rem;
-  }
-
-  .service-list-container {
-    padding: 10rem 0 1rem;
+    padding: 6rem 0 10rem;
   }
 
   .heading-secondary {
@@ -101,16 +90,12 @@ const Wrapper = styled.section`
     letter-spacing: 0.75px;
   }
 
-  .grid--2--cols {
+  .service-list-container {
+    padding: 15rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    padding: 0 0 20rem;
-  }
-
-  .grid--1--col {
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 9.6rem;
+    column-gap: 6.5rem;
   }
 
   .heading-tertiary {
@@ -130,7 +115,6 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: relative;
   }
 
@@ -163,14 +147,40 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 413px) {
-    .grid--2--cols {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      align-items: center;
-      padding: 0 0 20rem;
+    .service-heading-container {
+      padding: 6rem 0;
     }
+
     .service-list-container {
-      padding: 2rem 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 6.5rem;
+      padding: 0 0 3rem;
+    }
+
+    .service-image-container:nth-child(2) {
+      grid-row: 1;
+    }
+
+    .service-image-container:nth-child(6) {
+      grid-row: 5;
+    }
+
+    .service-image-container {
+      transform: translateY(5rem);
+    }
+
+    .service-image {
+      width: 70%;
+    }
+
+    .service-image-container::before {
+      width: 76%;
+      padding-bottom: 76%;
+    }
+    .service-image-container::after {
+      width: 86%;
+      padding-bottom: 86%;
     }
   }
 `;
