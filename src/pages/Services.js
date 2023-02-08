@@ -11,7 +11,7 @@ const Services = () => {
         </h2>
       </div>
       <div className="service-list-container grid--1--col">
-        <div className="grid--2--cols">
+        <div className="grid--2--cols flip">
           <div className="service-text-box">
             <h3 className="heading-tertiary">Water filtering installation</h3>
             <p className="service-description">
@@ -160,6 +160,15 @@ const Wrapper = styled.section`
   .service-image {
     width: 35%;
     border-radius: 9px;
+  }
+
+  @media (max-width: 413px) {
+    .grid--2--cols {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      align-items: center;
+      padding: 0 0 20rem;
+    }
   }
 `;
 

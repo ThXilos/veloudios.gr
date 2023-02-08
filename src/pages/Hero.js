@@ -113,7 +113,13 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (max-width: 413px) {
+  @media (orientation: landscape) and (max-width: 1081px) {
+    .hero-container {
+      gap: 25rem;
+    }
+  }
+
+  @media (max-width: 415px) {
     .hero-container {
       gap: 15rem;
     }
@@ -126,6 +132,16 @@ const Wrapper = styled.section`
     .hero-text {
       width: 85%;
       text-align: left;
+    }
+  }
+
+  @media (orientation: landscape) and (max-width: 915px) {
+    .hero-container {
+      gap: 0;
+    }
+    .hero-text {
+      padding: 0;
+      margin: 0;
     }
   }
 `;
