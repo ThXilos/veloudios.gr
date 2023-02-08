@@ -109,6 +109,10 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr;
       grid-gap: 2rem;
     }
+
+    .copyright-info {
+      max-width: 100%;
+    }
   }
 `;
 
