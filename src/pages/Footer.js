@@ -105,7 +105,8 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 413px) {
-    .justify-content: center;
+    display: flex;
+    flex-diretion: column;
 
     .footer-info-container {
       grid-template-columns: 1fr;
@@ -113,7 +114,8 @@ const Wrapper = styled.section`
     }
 
     .copyright-info {
-      max-width: 100%;
+      width: 100%;
+      text-align: center;
     }
   }
 `;
