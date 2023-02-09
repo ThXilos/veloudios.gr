@@ -146,7 +146,7 @@ const Wrapper = styled.section`
     border-radius: 9px;
   }
 
-  @media (max-width: 413px) {
+  @media (max-width: 600px) {
     .service-heading-container {
       padding: 6rem 0;
     }

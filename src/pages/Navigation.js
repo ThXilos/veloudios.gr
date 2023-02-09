@@ -170,28 +170,15 @@ const Wrapper = styled.section`
     }
 
     .language-selector {
-      top: -3rem;
-    }
-
-    .mobile-menu {
-    }
-  }
-
-  @media (max-width: 413px) {
-    .menu-item-container {
-      gap: 0;
+      top: -4rem;
+      right: -1rem;
     }
 
     .ctc {
-      text-align: center;
-      font-size: 2rem;
       padding: 1rem 2rem;
-      width: 10rem;
-      margin-right: 1rem;
     }
 
-    .language-selector {
-      right: -2rem;
+    .mobile-menu {
     }
   }
 `;

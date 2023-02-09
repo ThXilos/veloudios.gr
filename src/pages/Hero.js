@@ -8,13 +8,9 @@ const Hero = () => {
         <h1 className="hero-title">Plumbing services on Tinos Island.</h1>
         <div className="sub-heading">
           <p className="hero-text">
-            <span className="subtitle">
-              Solutions for all your house and business needs.
-            </span>
-            <br />
             <span className="secondary-subtitle">
-              <span className="brag-title">With 50+ businesses</span> using our
-              services.
+              <span className="brag-title">Supporting 50+ businesses</span>{" "}
+              around the island.
             </span>
           </p>
           <p className="btn">Get in touch</p>
@@ -99,56 +95,34 @@ const Wrapper = styled.section`
       url("assets/images/hero.jpg");
 
     .hero-container {
-      gap: 20rem;
+      padding-top: 10%;
+      gap: 10rem;
     }
 
     .hero-title {
-      width: 70%;
-      text-align: center;
+      font-size: 5rem;
+      width: 80%;
+      text-align: left;
+    }
+
+    .sub-heading {
+      width: 80%;
+      align-self: center;
     }
 
     .hero-text {
-      width: 60%;
       text-align: left;
+    }
+
+    .secondary-subtitle {
+      font-size: 3rem;
     }
   }
 
   @media (orientation: landscape) and (max-width: 1081px) {
-    .hero-container {
-      gap: 25rem;
-    }
-  }
-
-  @media (max-width: 415px) {
-    .hero-container {
-      gap: 15rem;
-    }
-
-    .hero-title {
-      width: 90%;
-      text-align: center;
-    }
-
-    .hero-text {
-      width: 85%;
-      text-align: left;
-    }
-  }
-
-  @media (max-width: 375px) {
-    .hero-container {
-      gap: 4.2rem;
-    }
   }
 
   @media (orientation: landscape) and (max-width: 915px) {
-    .hero-container {
-      gap: 0;
-    }
-    .hero-text {
-      padding: 0;
-      margin: 0;
-    }
   }
 `;
 
