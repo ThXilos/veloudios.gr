@@ -119,6 +119,32 @@ const Wrapper = styled.section`
     }
   }
 
+  @media (max-width: 375px) {
+    .hero-container {
+      padding-top: 0;
+      gap: 0;
+    }
+
+    .hero-title {
+      font-size: 4.8rem;
+      width: 80%;
+      text-align: left;
+    }
+
+    .sub-heading {
+      width: 80%;
+      align-self: center;
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .secondary-subtitle {
+      font-size: 2.8rem;
+    }
+  }
+
   @media (orientation: landscape) and (max-width: 1081px) {
   }
 

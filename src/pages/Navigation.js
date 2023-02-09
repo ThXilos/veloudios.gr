@@ -181,6 +181,22 @@ const Wrapper = styled.section`
     .mobile-menu {
     }
   }
+
+  @media (max-width: 375px) {
+    .menu-item-container {
+      gap: 1rem;
+    }
+    .language-selector {
+      top: -4rem;
+      right: -1rem;
+    }
+
+    .ctc {
+      font-size: 2rem;
+
+      padding: 1rem 2rem;
+    }
+  }
 `;
 
 export default Navigation;
