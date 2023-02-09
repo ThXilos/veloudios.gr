@@ -1,19 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 
-const Hero = () => {
+const Hero = ({ lang }) => {
   return (
     <Wrapper>
       <div className="hero-container">
-        <h1 className="hero-title">Plumbing services on Tinos Island.</h1>
+        <h1 className="hero-title">
+          {lang
+            ? "Plumbing services in Tinos Island."
+            : "Υδραυλικές εργασίες στην Τήνο"}
+        </h1>
         <div className="sub-heading">
           <p className="hero-text">
             <span className="secondary-subtitle">
-              <span className="brag-title">Supporting 50+ businesses</span>{" "}
-              around the island.
+              <span className="brag-title">
+                {lang
+                  ? "Supporting 50+ businesses"
+                  : "Υποστηρίζοντας 50+ επιχειρήσεις"}
+              </span>{" "}
+              {lang ? "around the island." : "στο νησί"}
             </span>
           </p>
-          <p className="btn">Get in touch</p>
+          <p className="btn">
+            {lang ? "Get in touch" : "Επικοινωνήστε μαζί μας"}
+          </p>
         </div>
       </div>
     </Wrapper>

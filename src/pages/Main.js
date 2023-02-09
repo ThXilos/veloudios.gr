@@ -1,10 +1,10 @@
 import Hero from "./Hero";
 import Services from "./Services";
 
-const Main = () => {
+const Main = ({ lang }) => {
   return (
     <section>
-      <Hero />
+      <Hero lang={lang} />
       <Services />
     </section>
   );
