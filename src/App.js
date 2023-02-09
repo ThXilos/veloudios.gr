@@ -6,6 +6,7 @@ import Main from "./pages/Main";
 import Footer from "./pages/Footer";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 import ScrollButton from "./component/ScrollButton";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             path="/services"
             element={<Services lang={language} />}
           />
+          <Route exact path="/contact" element={<Contact lang={language} />} />
         </Routes>
         <Footer lang={language} />
         <ScrollButton />

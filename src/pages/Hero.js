@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Hero = ({ lang }) => {
   return (
@@ -21,9 +22,9 @@ const Hero = ({ lang }) => {
               {lang ? "around the island." : "στο νησί"}
             </span>
           </p>
-          <p className="btn">
+          <NavLink className="btn" to="/contact">
             {lang ? "Get in touch" : "Επικοινωνήστε μαζί μας"}
-          </p>
+          </NavLink>
         </div>
       </div>
     </Wrapper>
@@ -75,12 +76,15 @@ const Wrapper = styled.section`
   }
 
   .btn {
+    color: #fff;
+    text-decoration: none;
     display: inline-block;
     background-color: #21ceb9;
     padding: 2rem 6rem;
     border-radius: 9px;
     font-size: 2rem;
     transition: all 0.3s;
+    text-align: center;
   }
 
   .btn:hover {

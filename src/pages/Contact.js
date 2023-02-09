@@ -1,26 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import ContactForm from "../component/ContactForm";
 
-const About = ({ lang }) => {
+const Contact = ({ lang }) => {
   return (
     <Wrapper>
       <div className="about-container">
-        <div className="about-image-container">
-          <img
-            src="https://via.placeholder.com/300"
-            alt="Giannis Veloudios"
-            className="about-image"
-          />
-        </div>
         <div className="about-text-container">
           <h1 className="about-title">
-            {lang ? "Meet your plumber" : "Γνωρίστε τον υδραυλικό σάς"}
+            {lang ? "Got Questions?" : "Έχεις ερωτήσεις?"}
           </h1>
           <p className="about-text">
-            {lang
-              ? "Giannis Veloudios is a resident of Tinos Island, with over 20 year of experience and currently provides varius plumbing services to over 50 local business across the island."
-              : "Ο Γιαννη Βελουδιος ειναι κατοικος Τηνου, με πανω απο 20 χρονια εμπειριας στον τομεα και προσφερει υδραυλικες υπηρεσιες σε πανω απο 50 επιχειρησεις με βαση το νησι της Τηνου."}
+            {lang ? "Please feel free to reach out." : "Επικοινώνησε μαζί μας"}
           </p>
+        </div>
+        <div className="contact-form-container">
+          <ContactForm lang={lang} />
         </div>
       </div>
     </Wrapper>
@@ -42,7 +37,7 @@ const Wrapper = styled.section`
     gap: 2rem;
   }
 
-  .about-image-container {
+  .contact-form-container {
   }
 
   .about-image {
@@ -50,6 +45,7 @@ const Wrapper = styled.section`
   }
 
   .about-text-container {
+    text-align: center;
   }
 
   .about-title {
@@ -81,7 +77,8 @@ const Wrapper = styled.section`
     .about-text {
       font-size: 2.6rem;
     }
+    padding: 0;
   }
 `;
 
-export default About;
+export default Contact;
