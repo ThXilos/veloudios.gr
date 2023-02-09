@@ -162,6 +162,7 @@ const Wrapper = styled.section`
 
     .menu-item-container {
       padding-right: 2rem;
+      gap: 1rem;
     }
 
     .menu-icon {
