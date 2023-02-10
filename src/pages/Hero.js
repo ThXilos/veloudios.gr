@@ -33,7 +33,7 @@ const Hero = ({ lang }) => {
 
 const Wrapper = styled.section`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/images/hero.jpg");
+    url("assets/images/hero.webp");
   background-size: cover;
   background-position: 20% 65%;
   height: 80vh;
@@ -106,7 +106,7 @@ const Wrapper = styled.section`
   @media (max-width: 600px) {
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-      url("assets/images/hero.jpg");
+      url("assets/images/hero.webp");
 
     .hero-container {
       padding-top: 10%;
