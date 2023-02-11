@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { TbGridDots, TbArrowsHorizontal } from "react-icons/tb";
 const Navigation = ({ language, handleSelection }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <Wrapper>
       <nav className="navigation-container">
@@ -10,18 +16,32 @@ const Navigation = ({ language, handleSelection }) => {
           <p className="logo">logo</p>
         </div>
         <div className="menu-item-container">
-          <ul className="menu-item-list">
-            <li className="menu-item hide">
+          <ul
+            className={
+              menuOpen
+                ? "menu-item-list mobile-menu-open"
+                : "menu-item-list mobile-menu-closed"
+            }
+          >
+            <li
+              className="menu-item hide"
+              onClick={() => {
+                handleToggle();
+              }}
+            >
+              <button className="close-menu-button">x</button>
+            </li>
+            <li className="menu-item">
               <NavLink className="menu-link" to="/">
                 Main
               </NavLink>
             </li>
-            <li className="menu-item hide">
+            <li className="menu-item">
               <NavLink className="menu-link" to="/about">
                 About
               </NavLink>
             </li>
-            <li className="menu-item hide">
+            <li className="menu-item">
               <NavLink className="menu-link" to="/services">
                 Services
               </NavLink>
@@ -32,10 +52,18 @@ const Navigation = ({ language, handleSelection }) => {
               Call us
             </a>
           </div>
-          <div>
+          <div
+            className="mobile-menu-icon-container"
+            onClick={() => {
+              handleToggle();
+            }}
+          >
             <TbGridDots className="menu-icon" />
           </div>
-          <div className="language-selector" onClick={() => handleSelection()}>
+          <div
+            className="language-selector-container"
+            onClick={() => handleSelection()}
+          >
             <p>{language ? "EN" : "GR"}</p>
             <TbArrowsHorizontal className="lang-toggle" />
           </div>
@@ -46,156 +74,135 @@ const Navigation = ({ language, handleSelection }) => {
 };
 
 const Wrapper = styled.section`
-  background-color: #1c1e6c;
-  color: #fff;
-  text-transform: capitalize;
+  p,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
-  .menu-icon {
+  .hide {
     display: none;
   }
 
+  background-color: #1c1e6c;
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
+
   .navigation-container {
-    max-width: 1200px;
+    padding: 2rem 2rem;
     margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-  }
-
-  .logo-container {
-    font-size: 3.6rem;
-  }
-
-  .logo:hover {
-    cursor: pointer;
   }
 
   .menu-item-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 5rem;
-    position: relative;
+    gap: 2rem;
   }
 
   .menu-item-list {
+    display: flex;
     list-style: none;
-    display: flex;
-    gap: 5rem;
-    font-size: 2.2rem;
-    align-items: center;
-  }
-
-  .language-selector {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    position: absolute;
-    top: -15px;
-    right: -35px;
-  }
-  .language-selector:hover {
-    cursor: pointer;
-  }
-
-  .lang-toggle {
-    color: #fff;
+    gap: 2rem;
   }
 
   .menu-link {
-    color: #fff;
     text-decoration: none;
+    color: #fff;
     opacity: 0.8;
-    display: block;
-
-    transition: all 0.3s;
-  }
-  .ctc {
-    font-size: 2rem;
-    background-color: #21ceb9;
-    padding: 1rem 4rem;
-    border-radius: 9px;
   }
 
   .menu-link:hover {
+    transition: all 0.3s;
     opacity: 1;
   }
 
-  .menu-link.active {
+  .ctc-container {
+    background-color: red;
+    padding: 1rem 1.6rem;
+    border-radius: 9px;
+  }
+
+  .active {
     opacity: 1;
   }
 
-  @media (max-width: 1300px) {
-    .navigation-container {
-      max-width: 900px;
-    }
+  .mobile-menu-icon-container {
+    display: none;
+    align-items: center;
   }
 
-  @media (max-width: 1000px) {
-    .navigation-container {
-      max-width: 700px;
-    }
+  .language-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+    align-self: flex-start;
   }
 
-  @media (max-width: 835px) {
-    .navigation-container {
-      justify-content: space-around;
-    }
-
-    .navigation-container .menu-item-list {
-      gap: 2rem;
-    }
-
-    .navigation-container .menu-item-list .ctc {
-      padding: 1rem 2rem;
-    }
-
-    .navigation-container .menu-item-list .language-selector {
-      right: -35px;
-    }
+  .language-selector-container:hover {
+    cursor: pointer;
   }
+
   @media (max-width: 600px) {
-    .hide {
-      display: none;
+    .navigation-container {
+      max-width: 400px;
     }
 
     .menu-item-container {
-      padding-right: 2rem;
-      gap: 1rem;
     }
 
-    .menu-icon {
-      display: block;
+    .mobile-menu-icon-container {
+      display: flex;
       font-size: 4rem;
     }
 
-    .language-selector {
-      top: -4rem;
-      right: -1rem;
+    //Mobile menu
+
+    .close-menu-button {
+      font-size: 4rem;
+      padding: 1rem;
+      background: none;
+      border: none;
+      color: #fff;
     }
 
-    .ctc {
-      padding: 1rem 2rem;
+    .hide {
+      display: block;
     }
 
-    .mobile-menu {
-    }
-  }
-
-  @media (max-width: 375px) {
-    .menu-item-container {
-      gap: 1rem;
-    }
-    .language-selector {
-      top: -4rem;
-      right: -1rem;
+    .mobile-menu-open {
+      display: flex;
     }
 
-    .ctc {
-      font-size: 2rem;
+    .mobile-menu-closed {
+      display: none;
+    }
 
-      padding: 1rem 2rem;
+    .menu-item-list {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(15px);
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      opacity: 0.9;
+    }
+
+    li .menu-link {
+      text-transform: uppercase;
+      font-size: 4rem;
+      color: #fff;
     }
   }
 `;

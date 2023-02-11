@@ -9,13 +9,15 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import ScrollButton from "./component/ScrollButton";
 
+import styled from "styled-components";
+
 function App() {
   const [language, setLanguage] = useState(false);
   const handleSelection = () => {
     setLanguage(!language);
   };
   return (
-    <div>
+    <Wrapper>
       <header>
         <Navigation language={language} handleSelection={handleSelection} />
         <Routes>
@@ -32,8 +34,10 @@ function App() {
         <ScrollButton />
       </header>
       <main></main>
-    </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div``;
 
 export default App;

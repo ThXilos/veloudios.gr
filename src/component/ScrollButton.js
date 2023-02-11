@@ -30,6 +30,7 @@ const ScrollButton = () => {
         className="btn-toTop"
         style={{ opacity: visible ? "1" : "0" }}
         onClick={scrollToTop}
+        aria-label="Navigate to top"
       >
         <TbChevronUp />
       </button>
