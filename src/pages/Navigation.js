@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { TbGridDots, TbArrowsHorizontal } from "react-icons/tb";
 const Navigation = ({ language, handleSelection }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
@@ -134,7 +134,6 @@ const Wrapper = styled.section`
 
   .mobile-menu-icon-container {
     display: none;
-    align-items: center;
   }
 
   .language-selector-container {
@@ -159,7 +158,9 @@ const Wrapper = styled.section`
 
     .mobile-menu-icon-container {
       display: flex;
+      align-items: center;
       font-size: 4rem;
+      cursor: pointer;
     }
 
     //Mobile menu
@@ -177,26 +178,31 @@ const Wrapper = styled.section`
     }
 
     .mobile-menu-open {
-      display: flex;
+      right: 0;
+      transition: all 500ms;
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
     }
 
     .mobile-menu-closed {
-      display: none;
+      right: -60%;
+      transition: all 500ms;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
     }
 
     .menu-item-list {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(15px);
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      left: 0;
       flex-direction: column;
       justify-content: center;
+      position: absolute;
+      width: 60%;
+      height: 100vh;
+      top: 0;
       align-items: center;
+      background: #1c1e6c;
       z-index: 1;
-      opacity: 0.9;
     }
 
     li .menu-link {
