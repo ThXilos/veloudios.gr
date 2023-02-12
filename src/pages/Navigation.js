@@ -186,7 +186,8 @@ const Wrapper = styled.section`
     }
 
     .mobile-menu-closed {
-      right: -60%;
+      right: 0;
+      transform: translateX(100%);
       transition: all 500ms;
       opacity: 0;
       pointer-events: none;
