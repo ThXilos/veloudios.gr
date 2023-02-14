@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { TbGridDots, TbArrowsHorizontal } from "react-icons/tb";
 const Navigation = ({ language, handleSelection }) => {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
