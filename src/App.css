@@ -14,6 +14,7 @@ Font sizing: 10 12 14 16 18 20 22 24 26 28 30 32 34 36;
 html {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
