@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { TbGridDots, TbArrowsHorizontal } from "react-icons/tb";
+import {
+  TbGridDots,
+  TbArrowsHorizontal,
+  TbLayoutSidebarLeftExpand,
+} from "react-icons/tb";
 const Navigation = ({ language, handleSelection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -20,7 +24,9 @@ const Navigation = ({ language, handleSelection }) => {
     <Wrapper>
       <nav className="navigation-container">
         <div className="logo-container">
-          <p className="logo">logo</p>
+          <NavLink to="/" className="logo">
+            logo
+          </NavLink>
         </div>
         <div className="menu-item-container">
           <ul
@@ -30,14 +36,6 @@ const Navigation = ({ language, handleSelection }) => {
                 : "menu-item-list mobile-menu-closed"
             }
           >
-            <li
-              className="menu-item hide"
-              onClick={() => {
-                handleToggle();
-              }}
-            >
-              <button className="close-menu-button">x</button>
-            </li>
             <li className="menu-item">
               <NavLink className="menu-link" to="/">
                 Main
@@ -53,6 +51,23 @@ const Navigation = ({ language, handleSelection }) => {
                 Services
               </NavLink>
             </li>
+            <div className="open-mobile-menu-controll-container">
+              <div
+                className="language-selector-container"
+                onClick={() => handleSelection()}
+              >
+                <p>{language ? "EN" : "GR"}</p>
+                <TbArrowsHorizontal className="lang-toggle" />
+              </div>
+              <div
+                className="close-menu-button"
+                onClick={() => {
+                  handleToggle();
+                }}
+              >
+                <TbLayoutSidebarLeftExpand className="close-menu-button-icon" />
+              </div>
+            </div>
           </ul>
           <div className="ctc-container">
             <a href="tel:30 6937696704" className=" menu-link ctc">
@@ -95,6 +110,12 @@ const Wrapper = styled.section`
   color: #fff;
   font-size: 2rem;
   position: relative;
+
+  .logo {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
 
   .navigation-container {
     padding: 2rem 2rem;
@@ -160,9 +181,6 @@ const Wrapper = styled.section`
       max-width: 400px;
     }
 
-    .menu-item-container {
-    }
-
     .mobile-menu-icon-container {
       display: flex;
       align-items: center;
@@ -171,14 +189,6 @@ const Wrapper = styled.section`
     }
 
     //Mobile menu
-
-    .close-menu-button {
-      font-size: 4rem;
-      padding: 1rem;
-      background: none;
-      border: none;
-      color: #fff;
-    }
 
     .hide {
       display: block;
@@ -217,6 +227,27 @@ const Wrapper = styled.section`
       text-transform: uppercase;
       font-size: 4rem;
       color: #fff;
+    }
+
+    .open-mobile-menu-controll-container {
+      display: flex;
+      gap: 2rem;
+
+      .language-selector-container {
+        align-self: center;
+        font-size: 2rem;
+      }
+
+      .close-menu-button {
+        align-self: center;
+        cursor: pointer;
+      }
+      .close-menu-button-icon {
+        padding-top: 2px;
+        color: #fff;
+        align-self: center;
+        font-size: 3rem;
+      }
     }
   }
 `;

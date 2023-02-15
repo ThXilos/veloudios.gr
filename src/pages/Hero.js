@@ -9,7 +9,7 @@ const Hero = ({ lang }) => {
         <h1 className="hero-title">
           {lang
             ? "Plumbing services in Tinos Island."
-            : "Υδραυλικές εργασίες στην Τήνο"}
+            : "Υδραυλικές εργασίες στην Τήνο."}
         </h1>
         <div className="sub-heading">
           <p className="hero-text">
@@ -19,11 +19,11 @@ const Hero = ({ lang }) => {
                   ? "Supporting 50+ businesses"
                   : "Υποστηρίζοντας 50+ επιχειρήσεις"}
               </span>{" "}
-              {lang ? "around the island." : "στο νησί"}
+              {lang ? "around the island." : "στο νησί."}
             </span>
           </p>
           <NavLink className="btn" to="/contact">
-            {lang ? "Get in touch" : "Επικοινωνήστε μαζί μας"}
+            {lang ? "Get in touch" : "Επικοινώνησε μαζί μας"}
           </NavLink>
         </div>
       </div>
