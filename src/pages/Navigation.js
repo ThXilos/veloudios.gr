@@ -9,6 +9,13 @@ const Navigation = ({ language, handleSelection }) => {
     setMenuOpen(!menuOpen);
   };
 
+  if (menuOpen) {
+    document.body.classList.add("no-scroll");
+  }
+  if (!menuOpen) {
+    document.body.classList.remove("no-scroll");
+  }
+
   return (
     <Wrapper>
       <nav className="navigation-container">
