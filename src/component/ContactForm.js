@@ -15,13 +15,10 @@ const ContactForm = ({ lang, setEmailStatus }) => {
     const { name, value } = e.target;
     setPayload((prev) => ({ ...prev, [name]: value }));
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { ...payload };
-    console.log(data);
     const response = await axios.post(process.env.REACT_APP_MAIL_ROUTE, data);
-    console.log(setEmailStatus);
     response.data.success && setEmailStatus(true);
   };
 
