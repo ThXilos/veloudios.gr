@@ -18,7 +18,6 @@ const ContactForm = ({ lang, setEmailStatus }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { ...payload };
-    console.log(process.env.REACT_APP_MAIL_ROUTE);
     try {
       const response = await axios.post(process.env.REACT_APP_MAIL_ROUTE, data);
       response.data.success && setEmailStatus(true);
