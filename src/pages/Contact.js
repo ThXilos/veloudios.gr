@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ContactForm from "../component/ContactForm";
 
 const Contact = ({ lang }) => {
+  const [emailStatus, setEmailStatus] = useState(false);
+  const handleClose = () => {
+    setEmailStatus(false);
+  };
   return (
     <Wrapper>
       <div className="about-container">
+        <div className={`module-success ${emailStatus && "show"}`}>
+          <p className="module-text">
+            {lang ? "We got your message!" : "Το μήνυμα σου έχει σταλθεί! "}
+          </p>
+          <p className="module-text btn" onClick={handleClose}>
+            ok
+          </p>
+        </div>
         <div className="about-text-container">
           <h1 className="about-title">
             {lang ? "Got Questions?" : "Έχεις ερωτήσεις?"}
@@ -15,7 +27,7 @@ const Contact = ({ lang }) => {
           </p>
         </div>
         <div className="contact-form-container">
-          <ContactForm lang={lang} />
+          <ContactForm lang={lang} setEmailStatus={setEmailStatus} />
         </div>
       </div>
     </Wrapper>
@@ -32,7 +44,45 @@ const Wrapper = styled.section`
 
   padding: 100px 0 100px;
 
+  .module-success {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 9px;
+    height: 50px;
+    width: 200px;
+    background-color: #198754;
+    position: absolute;
+    right: 50%;
+    top: 120%;
+    transform: translate(50%, -50%);
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .module-text {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 1.3rem;
+  }
+
+  .module-success .btn {
+    border: 1px solid #fff;
+    padding: 0 1rem;
+    text-transform: uppercase;
+  }
+  .module-success .btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
   .about-container {
+    position: relative;
     display: flex;
     gap: 2rem;
   }

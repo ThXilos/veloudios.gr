@@ -156,6 +156,10 @@ const Wrapper = styled.section`
     border-radius: 9px;
   }
 
+  .open-mobile-menu-controll-container {
+    display: none;
+  }
+
   .active {
     opacity: 1;
   }
