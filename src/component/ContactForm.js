@@ -20,10 +20,7 @@ const ContactForm = ({ lang, setEmailStatus }) => {
     e.preventDefault();
     const data = { ...payload };
     console.log(data);
-    const response = await axios.post(
-      "http://localhost:5000/api/sendemail",
-      data
-    );
+    const response = await axios.post(process.env.REACT_APP_MAIL_ROUTE, data);
     console.log(setEmailStatus);
     response.data.success && setEmailStatus(true);
   };
