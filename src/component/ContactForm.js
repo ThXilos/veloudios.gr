@@ -2,7 +2,6 @@
 // For more help visit https://formspr.ee/react-help
 import React, { useState } from "react";
 import styled from "styled-components";
-import { TbCheck } from "react-icons/tb";
 import axios from "axios";
 
 const ContactForm = ({ lang, setEmailStatus }) => {
@@ -79,8 +78,6 @@ const ContactForm = ({ lang, setEmailStatus }) => {
     </Wrapper>
   );
 };
-
-const SuccesMessageWrapper = styled.div``;
 
 const Wrapper = styled.section`
   .form-container {
