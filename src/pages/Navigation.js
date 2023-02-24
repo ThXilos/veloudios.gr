@@ -38,17 +38,17 @@ const Navigation = ({ language, handleSelection }) => {
           >
             <li className="menu-item">
               <NavLink className="menu-link" to="/">
-                {language ? "MAIN" : "ΑΡΧΙΚΗ"}
+                {language ? "Main" : "Αρχική"}
               </NavLink>
             </li>
             <li className="menu-item">
               <NavLink className="menu-link" to="/about">
-                {language ? "ABOUT" : "ΣΧΕΤΙΚΑ"}
+                {language ? "About" : "Σχετικά"}
               </NavLink>
             </li>
             <li className="menu-item">
               <NavLink className="menu-link" to="/services">
-                {language ? "SERVICES" : "ΥΠΗΡΕΣΙΕΣ"}
+                {language ? "Services" : "Υπηρεσίες"}
               </NavLink>
             </li>
             <div className="open-mobile-menu-controll-container">
