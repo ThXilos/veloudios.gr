@@ -1,32 +1,44 @@
 import React from "react";
 import styled from "styled-components";
-
-const Footer = () => {
+import { MailIcon, PhoneIcon, LocationIcon } from "../utils";
+const Footer = ({ lang }) => {
   return (
     <Wrapper>
       <div className="footer-info-container">
         <div className="contact-info col-1">
           <p className="footer-column-title">
-            About Veloudios Plumbing Services
+            {lang
+              ? "About Veloudios Plumbing Services"
+              : "Σχετικα με τις υδραυλικες υπηρεσιες Veloudios"}
           </p>
           <p className="footer-text">
-            With years of experience and active clients and installations on the
-            island of Tinos , Veloudios Plumbing Services insures customer
-            satisfaction. Our business has its base on the island of Tinos and
-            has a wide veriety of services.
+            {lang
+              ? "With years of experience and active clients and installations on theisland of Tinos , Veloudios Plumbing Services insures customer satisfaction. Our business has its base on the island of Tinos and has a wide veriety of services."
+              : "Με χρόνια εμπειρίας και ενεργούς πελάτες και εγκαταστάσεις στο νησί της Τήνου, οι Υδραυλικές Υπηρεσίες Βελούδιος εξασφαλίζουν την ικανοποίηση των πελατών. Η επιχείρησή μας έχει τη βάση της στο νησί της Τήνου και προσφέρει μια μεγάλη ποικιλία υπηρεσιών."}
           </p>
         </div>
 
         <div className="contact-info col-2">
-          <p className="footer-column-title">Licence to operate</p>
+          <p className="footer-column-title">
+            {lang ? "Licence to operate" : "Αδεια Παροχης Υπηρεσιων"}
+          </p>
           <p className="footer-text">Lic No: xxx-3232-xxx-3233</p>
         </div>
         <div className="contact-info col-3">
-          <p className="footer-column-title">Contact Information</p>
+          <p className="footer-column-title">
+            {lang ? "contact information" : "στοιχεια επικοινωνιας"}
+          </p>
           <ul className="footer-contact-list">
-            <li className="footer-text">Mobile: +30 696 85 74 852</li>
-            <li className="footer-text">Email: contact@veloudios.gr</li>
-            <li className="footer-text">Address: Megaloxarh, 32, TK 84200</li>
+            <li className="footer-text">
+              <PhoneIcon className="contact-icon" /> +30 69x xx xx xxx
+            </li>
+            <li className="footer-text">
+              <MailIcon className="contact-icon" /> contact@vel-filters.gr
+            </li>
+            <li className="footer-text">
+              <LocationIcon className="contact-icon" />
+              Megaloxarh, 32, TK 84200
+            </li>
           </ul>
         </div>
       </div>
@@ -65,6 +77,9 @@ const Wrapper = styled.section`
   .footer-contact-list {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .footer-text {
@@ -72,6 +87,13 @@ const Wrapper = styled.section`
     line-height: 1.5;
     font-weight: 300;
     opacity: 0.6;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
   }
 
   .copyright-info {

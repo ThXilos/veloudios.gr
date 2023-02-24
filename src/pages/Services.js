@@ -1,22 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
-const Services = () => {
+const Services = ({ lang }) => {
   return (
     <Wrapper>
       <div className="service-heading-container">
-        <span className="subheading">Our Services</span>
+        <span className="subheading">
+          {lang ? "Our Services" : "Υπηρεσιες"}
+        </span>
         <h2 className="heading-secondary">
-          Our services cover both business and household needs.
+          {lang
+            ? "Our services cover both business and household needs."
+            : "Οι υπηρεσίες μας καλύπτουν οικιακές και επαγγελματικές ανάγκες."}
         </h2>
       </div>
       <div className="service-list-container">
         <div className="service-text-box">
-          <h3 className="heading-tertiary">Water filtering installation</h3>
+          <h3 className="heading-tertiary">
+            {lang
+              ? "Water filtering installation"
+              : "Εγκατάσταση Φίλτρων Νερού"}
+          </h3>
           <p className="service-description">
-            Enjoy clean and safe drinking water with our water filter
-            installation service. Our experienced technicians will assess your
-            water quality and recommend the best solution for your needs.
+            {lang
+              ? "Enjoy clean and safe drinking water with our water filter installation service. Our experienced technicians will assess your water quality and recommend the best solution for your needs."
+              : "Απολαύστε καθαρό και ασφαλές πόσιμο νερό με την υπηρεσία εγκατάστασης φίλτρου νερού μας. Οι έμπειροι τεχνικοί μας θα αξιολογήσουν την ποιότητα του νερού σας και θα σας προτείνουν την καλύτερη λύση για τις ανάγκες σας."}
           </p>
         </div>
         <div className="service-image-container">
@@ -35,20 +43,24 @@ const Services = () => {
           />
         </div>
         <div className="service-text-box">
-          <h3 className="heading-tertiary">Water filtering installation</h3>
+          <h3 className="heading-tertiary">
+            {lang ? "Heat Pump installation" : "Εγκατάσταση Αντλίων Θερμότητας"}
+          </h3>
           <p className="service-description">
-            Enjoy clean and safe drinking water with our water filter
-            installation service. Our experienced technicians will assess your
-            water quality and recommend the best solution for your needs.
+            {lang
+              ? "With our heat pump installation service, you can enjoy a comfortable and warm environment all year round while saving on energy costs."
+              : "Με την υπηρεσία εγκατάστασης αντλιών θερμότητας μας, μπορείτε να απολαμβάνετε ένα άνετο και ζεστό περιβάλλον όλο το χρόνο ενώ εξοικονομείτε στο κόστος ενέργειας."}
           </p>
         </div>
         {/* add */}
         <div className="service-text-box">
-          <h3 className="heading-tertiary">Water filtering installation</h3>
+          <h3 className="heading-tertiary">
+            {lang ? "Plumbing Services" : "Υδραυλικές Υπηρεσίες"}
+          </h3>
           <p className="service-description">
-            Enjoy clean and safe drinking water with our water filter
-            installation service. Our experienced technicians will assess your
-            water quality and recommend the best solution for your needs.
+            {lang
+              ? "We take pride in our prompt and courteous service, and our commitment to customer satisfaction means we will go the extra mile to ensure your plumbing needs are met."
+              : "Είμαστε υπερήφανοι για την άμεση και ευγενική εξυπηρέτησή μας, και η δέσμευσή μας για την ικανοποίηση του πελάτη σημαίνει ότι θα κάνουμε τα πάντα για να εξασφαλίσουμε την ικανοποίηση των υδραυλικών σας αναγκών. "}
           </p>
         </div>
         <div className="service-image-container">

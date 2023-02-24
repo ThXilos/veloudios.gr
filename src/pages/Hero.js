@@ -80,7 +80,7 @@ const Wrapper = styled.section`
     text-decoration: none;
     display: inline-block;
     background-color: #21ceb9;
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
     border-radius: 9px;
     font-size: 2rem;
     transition: all 0.3s;

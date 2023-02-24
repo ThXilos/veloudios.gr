@@ -88,6 +88,7 @@ const Wrapper = styled.section`
   }
 
   .contact-form-container {
+    width: 100%;
   }
 
   .about-image {
@@ -96,6 +97,7 @@ const Wrapper = styled.section`
 
   .about-text-container {
     text-align: center;
+    width: 100%;
   }
 
   .about-title {

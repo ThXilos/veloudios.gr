@@ -5,7 +5,7 @@ import {
   TbGridDots,
   TbArrowsHorizontal,
   TbLayoutSidebarLeftExpand,
-} from "react-icons/tb";
+} from "../utils";
 const Navigation = ({ language, handleSelection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -38,17 +38,17 @@ const Navigation = ({ language, handleSelection }) => {
           >
             <li className="menu-item">
               <NavLink className="menu-link" to="/">
-                Main
+                {language ? "MAIN" : "ΑΡΧΙΚΗ"}
               </NavLink>
             </li>
             <li className="menu-item">
               <NavLink className="menu-link" to="/about">
-                About
+                {language ? "ABOUT" : "ΣΧΕΤΙΚΑ"}
               </NavLink>
             </li>
             <li className="menu-item">
               <NavLink className="menu-link" to="/services">
-                Services
+                {language ? "SERVICES" : "ΥΠΗΡΕΣΙΕΣ"}
               </NavLink>
             </li>
             <div className="open-mobile-menu-controll-container">
@@ -71,7 +71,7 @@ const Navigation = ({ language, handleSelection }) => {
           </ul>
           <div className="ctc-container">
             <a href="tel:30 6937696704" className=" menu-link ctc">
-              Call us
+              <p>{language ? "Call us" : "Κάλεσε"}</p>
             </a>
           </div>
           <div
