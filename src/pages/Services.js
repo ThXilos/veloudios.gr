@@ -141,13 +141,13 @@ const Wrapper = styled.section`
   }
 
   .service-image-container::before {
-    background-color: #21ceb9;
+    background-color: #259cd3;
     z-index: -1;
     width: 53%;
     padding-bottom: 53%;
   }
   .service-image-container::after {
-    background-color: #90e7dc;
+    background-color: #66bae0;
     z-index: -2;
     width: 60%;
     padding-bottom: 60%;

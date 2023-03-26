@@ -124,7 +124,7 @@ const Wrapper = styled.section`
   .btn {
     font-family: "Roboto", sans-serif;
     color: #fff;
-    background-color: #21ceb9;
+    background-color: #259cd3;
     border-radius: 9px;
     font-size: 2rem;
     transition: all 0.3s;
@@ -135,7 +135,7 @@ const Wrapper = styled.section`
 
   .btn:hover {
     cursor: pointer;
-    background-color: #4dd8c7;
+    background-color: #51b0dc;
   }
 
   @media (max-width: 600px) {

@@ -71,7 +71,7 @@ const Wrapper = styled.section`
 
   .brag-title {
     font-weight: 700;
-    color: #21ceb9;
+    color: #259cd3;
     opacity: 1;
   }
 
@@ -79,7 +79,7 @@ const Wrapper = styled.section`
     color: #fff;
     text-decoration: none;
     display: inline-block;
-    background-color: #21ceb9;
+    background-color: #259cd3;
     padding: 2rem 4rem;
     border-radius: 9px;
     font-size: 2rem;
@@ -89,7 +89,7 @@ const Wrapper = styled.section`
 
   .btn:hover {
     cursor: pointer;
-    background-color: #4dd8c7;
+    background-color: #66bae0;
   }
 
   @media (max-width: 1300px) {

@@ -25,7 +25,7 @@ const Navigation = ({ language, handleSelection }) => {
       <nav className="navigation-container">
         <div className="logo-container">
           <NavLink to="/" className="logo">
-            logo
+            Veloudios
           </NavLink>
         </div>
         <div className="menu-item-container">
@@ -112,9 +112,19 @@ const Wrapper = styled.section`
   position: relative;
 
   .logo {
+    font-size: 3rem;
     text-decoration: none;
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    position: relative;
+  }
+  .logo::after {
+    color: #259cd3;
+    content: "filters";
+    font-size: 1.6rem;
+    position: absolute;
+    text-transform: none;
+    transform: translateX(20%);
   }
 
   .navigation-container {
@@ -181,6 +191,12 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 600px) {
+    .logo {
+      font-size: 2.6rem;
+    }
+    .logo::after {
+      font-size: 1.2rem;
+    }
     .navigation-container {
       max-width: 400px;
     }

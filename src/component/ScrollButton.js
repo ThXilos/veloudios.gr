@@ -49,10 +49,10 @@ const Wrapper = styled.div`
     font-size: 5rem;
     z-index: 1;
     cursor: pointer;
-    color: #90e7dc;
+    color: #66bae0;
     height: 90px;
     align-items: center;
-    border: 2px solid #90e7dc;
+    border: 2px solid #66bae0;
     border-radius: 100px;
     box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
 
