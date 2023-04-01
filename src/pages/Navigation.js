@@ -70,7 +70,7 @@ const Navigation = ({ language, handleSelection }) => {
             </div>
           </ul>
           <div className="ctc-container">
-            <a href="tel:30 6937696704" className=" menu-link ctc">
+            <a href="tel:30 6936750639" className=" menu-link ctc">
               <p>{language ? "Call us" : "Κάλεσε"}</p>
             </a>
           </div>

@@ -4,15 +4,28 @@ import ContactForm from "../component/ContactForm";
 
 const Contact = ({ lang }) => {
   const [emailStatus, setEmailStatus] = useState(false);
+  const [warning, setWarning] = useState(false);
   const handleClose = () => {
     setEmailStatus(false);
+    setWarning(false);
   };
   return (
     <Wrapper>
       <div className="about-container">
-        <div className={`module-success ${emailStatus && "show"}`}>
+        <div
+          className={`module-success ${emailStatus && "show"}`}
+          style={{ backgroundColor: "#198754" }}
+        >
           <p className="module-text">
             {lang ? "We got your message!" : "Το μήνυμα σου έχει σταλθεί! "}
+          </p>
+          <p className="module-text btn" onClick={handleClose}>
+            ok
+          </p>
+        </div>
+        <div className={`module-success ${warning && "show"}`}>
+          <p className="module-text">
+            {lang ? "whoops,check your email" : "χμ, το email σου ειναι σωστο?"}
           </p>
           <p className="module-text btn" onClick={handleClose}>
             ok
@@ -27,7 +40,12 @@ const Contact = ({ lang }) => {
           </p>
         </div>
         <div className="contact-form-container">
-          <ContactForm lang={lang} setEmailStatus={setEmailStatus} />
+          <ContactForm
+            lang={lang}
+            setEmailStatus={setEmailStatus}
+            emailStatus={emailStatus}
+            setWarning={setWarning}
+          />
         </div>
       </div>
     </Wrapper>
@@ -53,7 +71,6 @@ const Wrapper = styled.section`
     border-radius: 9px;
     height: 50px;
     width: 200px;
-    background-color: #198754;
     position: absolute;
     right: 50%;
     top: 120%;

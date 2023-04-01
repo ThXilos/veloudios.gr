@@ -30,14 +30,14 @@ const Footer = ({ lang }) => {
           </p>
           <ul className="footer-contact-list">
             <li className="footer-text">
-              <PhoneIcon className="contact-icon" /> +30 69x xx xx xxx
+              <PhoneIcon className="contact-icon" /> +30 693 675 0639
             </li>
             <li className="footer-text">
-              <MailIcon className="contact-icon" /> contact@vel-filters.gr
+              <MailIcon className="contact-icon" /> contact@velfilters.gr
             </li>
             <li className="footer-text">
               <LocationIcon className="contact-icon" />
-              Megaloxarh, 32, TK 84200
+              Falatados, 84200
             </li>
           </ul>
         </div>

@@ -4,25 +4,53 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-const ContactForm = ({ lang, setEmailStatus }) => {
+const ContactForm = ({ lang, setEmailStatus, setWarning }) => {
   const [payload, setPayload] = useState({
     mail: "",
     typeOfService: "",
     shortDescription: "",
   });
 
+  const [honeypot, setHoneypot] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const checkEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const handleHoneypot = (e) => {
+    setHoneypot(e.target.value);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPayload((prev) => ({ ...prev, [name]: value }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { ...payload };
+    setLoading(true);
+    if (honeypot) {
+      alert("Sorry, your submission could not be processed at this time.");
+      return;
+    }
+    if (!checkEmail(payload.mail)) {
+      setLoading(false);
+      setWarning(true);
+      setTimeout(() => {
+        setWarning(false);
+      }, 3000);
+      return;
+    }
     try {
       const response = await axios.post(process.env.REACT_APP_MAIL_ROUTE, data);
       response.data.success && setEmailStatus(true);
       setPayload({ mail: "", typeOfService: "", shortDescription: "" });
+      setLoading(false);
     } catch (err) {
+      setLoading(false);
       console.log(err.message);
     }
   };
@@ -30,6 +58,12 @@ const ContactForm = ({ lang, setEmailStatus }) => {
   return (
     <Wrapper>
       <form className="form-container" onSubmit={handleSubmit}>
+        <input
+          type="hidden"
+          name="phone"
+          value={honeypot}
+          onChange={handleHoneypot}
+        />
         <input
           id="mail"
           type="email"
@@ -71,7 +105,7 @@ const ContactForm = ({ lang, setEmailStatus }) => {
           className="input description"
         />
         <button className="btn" type="submit">
-          {lang ? "Send" : "Στείλτο"}
+          {loading ? "loading " : lang ? "Send" : "Στείλτο"}
         </button>
       </form>
     </Wrapper>

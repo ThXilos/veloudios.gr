@@ -14,11 +14,11 @@ const Hero = ({ lang }) => {
         <div className="sub-heading">
           <p className="hero-text">
             <span className="secondary-subtitle">
+              {lang ? "Supportin " : "Υποστηρίζοντας "}
+              <br />
               <span className="brag-title">
-                {lang
-                  ? "Supporting 50+ businesses"
-                  : "Υποστηρίζοντας 50+ επιχειρήσεις"}
-              </span>{" "}
+                {lang ? "50+ businesses " : "50+ επιχειρήσεις "}
+              </span>
               {lang ? "around the island." : "στο νησί."}
             </span>
           </p>
@@ -45,7 +45,7 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
 
-    gap: 37rem;
+    gap: 1rem;
   }
 
   .hero-title {
@@ -60,6 +60,7 @@ const Wrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 17%;
   }
 
   .hero-text {
@@ -92,17 +93,6 @@ const Wrapper = styled.section`
     background-color: #66bae0;
   }
 
-  @media (max-width: 1300px) {
-    .hero-container {
-      gap: 34rem;
-    }
-  }
-  @media (max-width: 1000px) {
-  }
-
-  @media (max-width: 835px) {
-  }
-
   @media (max-width: 600px) {
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
@@ -122,10 +112,7 @@ const Wrapper = styled.section`
     .sub-heading {
       width: 80%;
       align-self: center;
-    }
-
-    .hero-text {
-      text-align: left;
+      margin-top: 10%;
     }
 
     .secondary-subtitle {
@@ -157,12 +144,6 @@ const Wrapper = styled.section`
     .secondary-subtitle {
       font-size: 2.8rem;
     }
-  }
-
-  @media (orientation: landscape) and (max-width: 1081px) {
-  }
-
-  @media (orientation: landscape) and (max-width: 915px) {
   }
 `;
 
