@@ -108,7 +108,7 @@ const Wrapper = styled.section`
     .sub-heading {
       width: 80%;
       align-self: center;
-      margin-top: 10%;
+      margin-top: 5%;
     }
 
     .secondary-subtitle {
