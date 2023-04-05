@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { products } from "../utils/products";
 import { NavLink } from "react-router-dom";
 const Filter = ({ lang }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { filterId } = useParams();
   const product = products[filterId];
   return (
