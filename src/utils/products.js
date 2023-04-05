@@ -45,7 +45,7 @@ export const products = [
   },
   {
     name: "10 Blue Housing",
-    img: "https://www.veluda.com/assets/pages/main_3b1f2-10''-blue-housing.jpg",
+    img: "https://res.cloudinary.com/dtekdjcan/image/upload/v1680672637/veloudios.gr/product%20images/bhousing10_zmsgei.jpg",
     type: "Φίλτρο κεντρικής παροχής 10''",
     description: [
       "Μπλέ φιλτροθήκη 10'' με είσοδο-έξοδο 1/2'' και 3/4''",
@@ -65,7 +65,7 @@ export const products = [
   },
   {
     name: "20 Blue Housing",
-    img: "https://www.veluda.com/assets/pages/main_e9d62-20''-blue-housing.jpg",
+    img: "https://res.cloudinary.com/dtekdjcan/image/upload/v1680672637/veloudios.gr/product%20images/bhousing20_iugw0c.jpg",
     type: "Φίλτρο κεντρικής παροχής 20''",
     description: [
       "Μπλέ φιλτροθήκη 20'' με είσοδο-έξοδο 3/4''",

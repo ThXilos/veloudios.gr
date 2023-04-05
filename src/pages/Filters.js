@@ -98,6 +98,13 @@ const Wrapper = styled.section`
   .product-description {
     font-size: 1.2rem;
   }
+
+  @media (max-width: 600px) {
+    .card {
+      width: 400px;
+      height: 300px;
+    }
+  }
 `;
 
 export default Filters;

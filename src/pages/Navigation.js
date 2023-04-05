@@ -24,8 +24,12 @@ const Navigation = ({ language, handleSelection }) => {
     <Wrapper>
       <nav className="navigation-container">
         <div className="logo-container">
-          <NavLink to="/" className="logo">
-            Veloudios
+          <NavLink to="/">
+            <img
+              src="https://res.cloudinary.com/dtekdjcan/image/upload/v1680674696/veloudios.gr/logo/logo-veloudios_qggapz.png"
+              alt="veloudios logo"
+              className="logo"
+            />
           </NavLink>
         </div>
         <div className="menu-item-container">
@@ -112,19 +116,7 @@ const Wrapper = styled.section`
   position: relative;
 
   .logo {
-    font-size: 3rem;
-    text-decoration: none;
-    color: #fff;
-    text-transform: capitalize;
-    position: relative;
-  }
-  .logo::after {
-    color: #259cd3;
-    content: "filters";
-    font-size: 1.6rem;
-    position: absolute;
-    text-transform: none;
-    transform: translateX(20%);
+    width: 200px;
   }
 
   .navigation-container {
@@ -192,11 +184,9 @@ const Wrapper = styled.section`
 
   @media (max-width: 600px) {
     .logo {
-      font-size: 2.6rem;
+      width: 150px;
     }
-    .logo::after {
-      font-size: 1.2rem;
-    }
+
     .navigation-container {
       max-width: 400px;
     }
