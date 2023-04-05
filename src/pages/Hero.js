@@ -32,8 +32,8 @@ const Hero = ({ lang }) => {
 };
 
 const Wrapper = styled.section`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/images/hero.webp");
+  background-color: #1c1e6c;
+  background-image: linear-gradient(160deg, #1c1e6c 0%, #0093e9 100%);
   background-size: cover;
   background-position: 20% 65%;
   height: 80vh;
@@ -94,10 +94,6 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 600px) {
-    background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-      url("assets/images/hero.webp");
-
     .hero-container {
       padding-top: 10%;
       gap: 10rem;
