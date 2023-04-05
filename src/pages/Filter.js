@@ -83,6 +83,22 @@ const Wrapper = styled.section`
     font-size: 1.2rem;
     text-transform: uppercase;
   }
+
+  @media (max-width: 600px) {
+    height: auto;
+
+    .container {
+      padding: 0 0 2rem;
+      flex-direction: column;
+    }
+    .image-container {
+      width: auto;
+    }
+
+    .information-container {
+      width: auto;
+    }
+  }
 `;
 
 export default Filter;

@@ -5,6 +5,7 @@ import {
   TbGridDots,
   TbArrowsHorizontal,
   TbLayoutSidebarLeftExpand,
+  PhoneIcon,
 } from "../utils";
 const Navigation = ({ language, handleSelection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -75,7 +76,10 @@ const Navigation = ({ language, handleSelection }) => {
           </ul>
           <div className="ctc-container">
             <a href="tel:30 6936750639" className=" menu-link ctc">
-              <p>{language ? "Call us" : "Κάλεσε"}</p>
+              {/* <p>{language ? "Call us" : "Κάλεσε"}</p> */}
+              <p>
+                <PhoneIcon className="phone-ico" />
+              </p>
             </a>
           </div>
           <div
@@ -154,7 +158,7 @@ const Wrapper = styled.section`
 
   .ctc-container {
     background-color: red;
-    padding: 1rem 1.6rem;
+    padding: 1rem 3rem;
     border-radius: 9px;
   }
 
@@ -199,6 +203,14 @@ const Wrapper = styled.section`
     }
 
     //Mobile menu
+
+    .ctc-container {
+      padding: 1rem 2rem;
+    }
+
+    .phone-ico {
+      padding: 0 1rem;
+    }
 
     .hide {
       display: block;
