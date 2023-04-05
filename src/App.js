@@ -7,6 +7,8 @@ import Footer from "./pages/Footer";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Filters from "./pages/Filters";
+import Filter from "./pages/Filter";
 import ScrollButton from "./component/ScrollButton";
 
 import styled from "styled-components";
@@ -29,6 +31,12 @@ function App() {
             element={<Services lang={language} />}
           />
           <Route exact path="/contact" element={<Contact lang={language} />} />
+          <Route exact path="/filters" element={<Filters lang={language} />} />
+          <Route
+            exact
+            path="/filters/:filterId"
+            element={<Filter lang={language} />}
+          />
         </Routes>
         <Footer lang={language} />
         <ScrollButton />
