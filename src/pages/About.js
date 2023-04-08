@@ -19,7 +19,7 @@ const About = ({ lang }) => {
           <p className="about-text">
             {lang
               ? "Giannis Veloudios is a resident of Tinos Island, with over 20 year of experience and currently provides varius plumbing services to over 50 local business across the island."
-              : "Ο Γιαννη Βελουδιος ειναι κατοικος Τηνου, με πανω απο 20 χρονια εμπειριας στον τομεα και προσφερει υδραυλικες υπηρεσιες σε πανω απο 50 επιχειρησεις με βαση το νησι της Τηνου."}
+              : "Ο Γιαννης Βελουδιος ειναι κατοικος Τηνου με πολλα χρονια εμπειριας στις υδραυλικες εγκαταστασεις,θερμανση-ψυξη και στα συστηματα επεξεργασιας ποσιμου νερου."}
           </p>
         </div>
       </div>

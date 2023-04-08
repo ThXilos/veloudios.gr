@@ -8,8 +8,8 @@ const Hero = ({ lang }) => {
       <div className="hero-container">
         <h1 className="hero-title">
           {lang
-            ? "Plumbing services in Tinos Island."
-            : "Υδραυλικές εργασίες στην Τήνο."}
+            ? "Plumbing installations, water filtration, and heating-cooling studies."
+            : "Υδραυλικές Εγκαταστάσεις, Φίλτρα Νερού και Μελέτες Θέρμανσης-Ψύξης."}
         </h1>
         <div className="sub-heading">
           <p className="hero-text">
@@ -40,16 +40,17 @@ const Wrapper = styled.section`
   color: #fff;
 
   .hero-container {
+    text-transform: capitalize;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 1rem;
   }
 
   .hero-title {
     display: block;
+    width: 95rem;
     font-size: 4.5rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -96,13 +97,14 @@ const Wrapper = styled.section`
   @media (max-width: 600px) {
     .hero-container {
       padding-top: 10%;
-      gap: 10rem;
+      gap: 4rem;
     }
 
     .hero-title {
-      font-size: 5rem;
-      width: 80%;
+      font-size: 4rem;
+      width: 90%;
       text-align: left;
+      line-height: 1.5;
     }
 
     .sub-heading {

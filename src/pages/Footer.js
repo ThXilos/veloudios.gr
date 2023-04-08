@@ -14,7 +14,7 @@ const Footer = ({ lang }) => {
           <p className="footer-text">
             {lang
               ? "With years of experience and active clients and installations on theisland of Tinos , Veloudios Plumbing Services insures customer satisfaction. Our business has its base on the island of Tinos and has a wide veriety of services."
-              : "Με χρόνια εμπειρίας και ενεργούς πελάτες και εγκαταστάσεις στο νησί της Τήνου, οι Υδραυλικές Υπηρεσίες Βελούδιος εξασφαλίζουν την ικανοποίηση των πελατών. Η επιχείρησή μας έχει τη βάση της στο νησί της Τήνου και προσφέρει μια μεγάλη ποικιλία υπηρεσιών."}
+              : "Με χρόνια εμπειρίας και συνεχεις εγκαταστάσεις συστηματων φιλτρανσης στις κυκλαδες, οι  Υπηρεσίες velfilters εξασφαλίζουν την ικανοποίηση των πελατών. Η επιχείρησή μας έχει τη βάση της στο νησί της Τήνου και προσφέρει μια μεγάλη ποικιλία υπηρεσιών."}
           </p>
         </div>
 

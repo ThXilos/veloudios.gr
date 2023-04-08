@@ -24,7 +24,7 @@ const Services = ({ lang }) => {
           <p className="service-description">
             {lang
               ? "Enjoy clean and safe drinking water with our water filter installation service. Our experienced technicians will assess your water quality and recommend the best solution for your needs."
-              : "Απολαύστε καθαρό και ασφαλές πόσιμο νερό με την υπηρεσία εγκατάστασης φίλτρου νερού μας. Οι έμπειροι τεχνικοί μας θα αξιολογήσουν την ποιότητα του νερού σας και θα σας προτείνουν την καλύτερη λύση για τις ανάγκες σας."}
+              : "Απολαύστε καθαρό και ασφαλές πόσιμο νερό απο την μεγαλη γκαμα συστηματων φιλτρανσης και επεξεργασιας νερου. Aξιολογούμε πάντα τις ανάγκες σας και προτεινουμε οικονομικες και παραλληλα ποιοτικες λυσεις. "}
           </p>
         </div>
         <div className="service-image-container">
@@ -49,7 +49,7 @@ const Services = ({ lang }) => {
           <p className="service-description">
             {lang
               ? "With our heat pump installation service, you can enjoy a comfortable and warm environment all year round while saving on energy costs."
-              : "Με την υπηρεσία εγκατάστασης αντλιών θερμότητας μας, μπορείτε να απολαμβάνετε ένα άνετο και ζεστό περιβάλλον όλο το χρόνο ενώ εξοικονομείτε στο κόστος ενέργειας."}
+              : "Με την υπηρεσία εγκατάστασης αντλιών θερμότητας,μπορείτε να απολαμβάνετε ένα άνετο αναλογως την εποχη περιβάλλον ενώ εξοικονομείτε στο κόστος ενέργειας."}
           </p>
         </div>
         {/* add */}
@@ -60,7 +60,7 @@ const Services = ({ lang }) => {
           <p className="service-description">
             {lang
               ? "We take pride in our prompt and courteous service, and our commitment to customer satisfaction means we will go the extra mile to ensure your plumbing needs are met."
-              : "Είμαστε υπερήφανοι για την άμεση και ευγενική εξυπηρέτησή μας, και η δέσμευσή μας για την ικανοποίηση του πελάτη σημαίνει ότι θα κάνουμε τα πάντα για να εξασφαλίσουμε την ικανοποίηση των υδραυλικών σας αναγκών. "}
+              : "Είμαστε υπερήφανοι για την άμεση εξυπηρέτησή μας,η δέσμευσή μας για την ικανοποίηση του πελάτων σημαίνει ότι θα προτεινουμε οικονομικες και ποιοτικες λυσεις"}
           </p>
         </div>
         <div className="service-image-container">
