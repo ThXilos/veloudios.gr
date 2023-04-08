@@ -29,7 +29,7 @@ const Services = ({ lang }) => {
         </div>
         <div className="service-image-container">
           <img
-            src="https://via.placeholder.com/700"
+            src="https://res.cloudinary.com/dtekdjcan/image/upload/v1680969569/veloudios.gr/services/filter_n7suaa.webp"
             alt="Water filtering installation"
             className="service-image"
           />
@@ -37,7 +37,7 @@ const Services = ({ lang }) => {
         {/* add */}
         <div className="service-image-container">
           <img
-            src="https://via.placeholder.com/700"
+            src="https://res.cloudinary.com/dtekdjcan/image/upload/v1680969569/veloudios.gr/services/thermal_yss3eu.webp"
             alt="Water filtering installation"
             className="service-image"
           />
@@ -49,7 +49,7 @@ const Services = ({ lang }) => {
           <p className="service-description">
             {lang
               ? "With our heat pump installation service, you can enjoy a comfortable and warm environment all year round while saving on energy costs."
-              : "Με την υπηρεσία εγκατάστασης αντλιών θερμότητας,μπορείτε να απολαμβάνετε ένα άνετο αναλογως την εποχη περιβάλλον ενώ εξοικονομείτε στο κόστος ενέργειας."}
+              : "Με την  εγκατάσταση αντλιών θερμότητας την πλεον πιο διαδεδομενη μεθοδο θερμανσης-ψυξης, μπορείτε να απολαμβάνετε ένα άνετο αναλογως την εποχη περιβάλλον, εξοικονομοντας χρηματα και ενεργεια παντοτε με την σωστη μηχανολογικη μελετη."}
           </p>
         </div>
         {/* add */}
@@ -60,12 +60,12 @@ const Services = ({ lang }) => {
           <p className="service-description">
             {lang
               ? "We take pride in our prompt and courteous service, and our commitment to customer satisfaction means we will go the extra mile to ensure your plumbing needs are met."
-              : "Είμαστε υπερήφανοι για την άμεση εξυπηρέτησή μας,η δέσμευσή μας για την ικανοποίηση του πελάτων σημαίνει ότι θα προτεινουμε οικονομικες και ποιοτικες λυσεις"}
+              : "Στοχος μας ειναι η αμεση εξυπηρετηση σας, η δέσμευσή μας για την ικανοποίηση των πελάτων σημαίνει ότι θα προτεινουμε τις οικονομικοτερες και πιο ποιοτικες λυσεις για τις εκαστοτε αναγκες σας."}
           </p>
         </div>
         <div className="service-image-container">
           <img
-            src="https://via.placeholder.com/700"
+            src="https://res.cloudinary.com/dtekdjcan/image/upload/v1680969569/veloudios.gr/services/plumbing_k344qe.webp"
             alt="Water filtering installation"
             className="service-image"
           />

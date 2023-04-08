@@ -96,8 +96,8 @@ const Wrapper = styled.section`
 
   @media (max-width: 600px) {
     .hero-container {
-      padding-top: 10%;
-      gap: 4rem;
+      padding-top: 5%;
+      gap: 1rem;
     }
 
     .hero-title {
