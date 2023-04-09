@@ -22,7 +22,7 @@ const Footer = ({ lang }) => {
           <p className="footer-column-title">
             {lang ? "Licence to operate" : "Αδεια Παροχης Υπηρεσιων"}
           </p>
-          <p className="footer-text">Lic No: xxx-3232-xxx-3233</p>
+          <p className="footer-text">Lic No: 458</p>
         </div>
         <div className="contact-info col-3">
           <p className="footer-column-title">

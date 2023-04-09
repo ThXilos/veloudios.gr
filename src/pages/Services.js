@@ -65,7 +65,7 @@ const Services = ({ lang }) => {
         </div>
         <div className="service-image-container">
           <img
-            src="https://res.cloudinary.com/dtekdjcan/image/upload/v1680969569/veloudios.gr/services/plumbing_k344qe.webp"
+            src="https://res.cloudinary.com/dtekdjcan/image/upload/v1681021683/veloudios.gr/services/received_969047484086094_fw3ut9.webp"
             alt="Water filtering installation"
             className="service-image"
           />
