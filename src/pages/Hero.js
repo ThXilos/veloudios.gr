@@ -110,14 +110,14 @@ const Wrapper = styled.section`
 
     .hero-title {
       font-size: 4rem;
-      width: 90%;
+      width: 80%;
       text-align: left;
       line-height: 1.5;
     }
 
     .sub-heading {
       width: 80%;
-      align-self: center;
+      text-align: left;
       margin-top: 5%;
     }
 
@@ -133,16 +133,14 @@ const Wrapper = styled.section`
 
     .hero-title {
       font-size: 2.8rem;
-
-      text-align: left;
     }
 
     .sub-heading {
-      align-self: center;
+      text-align: ceter;
     }
 
     .hero-text {
-      text-align: left;
+      text-align: center;
     }
 
     .secondary-subtitle {

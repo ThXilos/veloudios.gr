@@ -43,17 +43,17 @@ const Navigation = ({ language, handleSelection }) => {
           >
             <li className="menu-item">
               <NavLink className="menu-link" to="/">
-                {language ? "Main" : "Αρχική"}
+                {language ? "Main" : "Αρχικη"}
               </NavLink>
             </li>
             <li className="menu-item">
               <NavLink className="menu-link" to="/about">
-                {language ? "About" : "Σχετικά"}
+                {language ? "About" : "Σχετικα"}
               </NavLink>
             </li>
             <li className="menu-item">
               <NavLink className="menu-link" to="/services">
-                {language ? "Services" : "Υπηρεσίες"}
+                {language ? "Services" : "Υπηρεσιες"}
               </NavLink>
             </li>
             <div className="open-mobile-menu-controll-container">
@@ -116,7 +116,7 @@ const Wrapper = styled.section`
 
   background-color: #1c1e6c;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
   position: relative;
 
   .logo {
@@ -133,6 +133,8 @@ const Wrapper = styled.section`
   }
 
   .menu-item-container {
+    font-size: 2rem;
+    text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,7 +160,7 @@ const Wrapper = styled.section`
 
   .ctc-container {
     background-color: red;
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
     border-radius: 9px;
   }
 
@@ -193,12 +195,12 @@ const Wrapper = styled.section`
 
     .navigation-container {
       max-width: 400px;
+      gap: 1rem;
     }
 
     .mobile-menu-icon-container {
       display: flex;
       align-items: center;
-      font-size: 4rem;
       cursor: pointer;
     }
 
@@ -247,7 +249,7 @@ const Wrapper = styled.section`
 
     li .menu-link {
       text-transform: uppercase;
-      font-size: 4rem;
+      font-size: 2.8rem;
       color: #fff;
     }
 
@@ -271,6 +273,9 @@ const Wrapper = styled.section`
         font-size: 3rem;
       }
     }
+  }
+
+  @media (max-width: 375px) {
   }
 `;
 
