@@ -6,11 +6,20 @@ const Hero = ({ lang }) => {
   return (
     <Wrapper>
       <div className="hero-container">
-        <h1 className="hero-title">
-          {lang
-            ? "Plumbing installations, water filtration, and heating-cooling studies."
-            : "Υδραυλικές Εγκαταστάσεις, Φίλτρα Νερού και Μελέτες Θέρμανσης-Ψύξης."}
-        </h1>
+        {lang ? (
+          <h1 className="hero-title">
+            Plumbing installations, water filtration, and heating-cooling
+            studies.
+          </h1>
+        ) : (
+          <h1 className="hero-title">
+            {" "}
+            Υδραυλικές Εγκαταστάσεις
+            <br /> Φίλτρα Νερού <br />
+            Μελέτες Θέρμανσης-Ψύξης.
+          </h1>
+        )}
+
         <div className="sub-heading">
           <p className="hero-text">
             <span className="secondary-subtitle">
@@ -36,7 +45,7 @@ const Wrapper = styled.section`
   background-image: linear-gradient(160deg, #1c1e6c 0%, #0093e9 100%);
   background-size: cover;
   background-position: 20% 65%;
-  height: 80vh;
+  padding: 1rem 0 2rem;
   color: #fff;
 
   .hero-container {
@@ -97,7 +106,6 @@ const Wrapper = styled.section`
   @media (max-width: 600px) {
     .hero-container {
       padding-top: 5%;
-      gap: 1rem;
     }
 
     .hero-title {
@@ -120,18 +128,16 @@ const Wrapper = styled.section`
 
   @media (max-width: 375px) {
     .hero-container {
-      padding-top: 0;
-      gap: 0;
+      padding: 0 1rem;
     }
 
     .hero-title {
-      font-size: 4.8rem;
-      width: 80%;
+      font-size: 2.8rem;
+
       text-align: left;
     }
 
     .sub-heading {
-      width: 80%;
       align-self: center;
     }
 
@@ -141,6 +147,10 @@ const Wrapper = styled.section`
 
     .secondary-subtitle {
       font-size: 2.8rem;
+    }
+
+    .btn {
+      padding: 1.8rem 2rem;
     }
   }
 `;
