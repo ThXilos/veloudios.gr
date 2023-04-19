@@ -105,6 +105,11 @@ const Wrapper = styled.section`
       height: 300px;
     }
   }
+  @media (max-width: 375px) {
+    .card {
+      width: 350px;
+    }
+  }
 `;
 
 export default Filters;
